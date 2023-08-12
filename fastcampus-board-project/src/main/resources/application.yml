@@ -18,6 +18,12 @@ spring:
     password: hooney1108!
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+#    h2 Test property
+#    url: jdbc:h2:mem:testdb
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+
   jpa:
     defer-datasource-initialization: true
     hibernate:
