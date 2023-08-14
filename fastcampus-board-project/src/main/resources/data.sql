@@ -1,4 +1,4 @@
-# Article 데이터
+
 insert into article (id, title, content, hashtag, created_at, created_by, modified_at, modified_by) values (1, 'Marketing Manager', 'White: The Melody of the Curse', '#eafcc3', '2022-09-23 02:39:53', 'iemmott0', '2022-09-25 02:02:21', 'lnaul0');
 insert into article (id, title, content, hashtag, created_at, created_by, modified_at, modified_by) values (2, 'Civil Engineer', 'Glass Bottom Boat, The', '#d0e678', '2022-12-05 03:43:24', 'vlonsdale1', '2022-11-27 18:15:44', 'vroomes1');
 insert into article (id, title, content, hashtag, created_at, created_by, modified_at, modified_by) values (3, 'Assistant Media Planner', 'Beast, The', '#2b05a6', '2023-04-30 17:50:33', 'tsayre2', '2022-12-30 15:44:07', 'cbecerro2');
@@ -1001,7 +1001,6 @@ insert into article (id, title, content, hashtag, created_at, created_by, modifi
 insert into article (id, title, content, hashtag, created_at, created_by, modified_at, modified_by) values (1000, 'Help Desk Operator', 'One to Another (Chacun sa nuit)', '#370c33', '2022-10-18 20:45:37', 'gbrendrr', '2023-03-08 00:29:03', 'awaszczykowskirr');
 
 
-# ArticleComment 데이터
 insert into article_comment (article_id, content, created_at, created_by, modified_at, modified_by) values (1, 'Second Jungle Book: Mowgli & Baloo, The', '2023-04-02 20:52:25', 'jlauret0', '2023-03-25 20:47:01', 'lborgars0');
 insert into article_comment (article_id, content, created_at, created_by, modified_at, modified_by) values (2, 'Art School Confidential', '2022-08-16 02:17:59', 'jbohlens1', '2023-02-15 19:02:31', 'jjillard1');
 insert into article_comment (article_id, content, created_at, created_by, modified_at, modified_by) values (3, 'Nowhere in Africa (Nirgendwo in Afrika)', '2022-12-30 09:52:16', 'bpinard2', '2023-08-02 07:56:17', 'lpalffy2');
