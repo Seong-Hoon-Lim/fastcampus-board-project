@@ -39,6 +39,7 @@ public class Article extends AuditingFields {
     private String content; //본문
 
     @Setter
+    @Column
     private String hashtag; //해시태그
 
     @OrderBy("id")
