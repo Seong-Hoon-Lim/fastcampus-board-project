@@ -1,6 +1,6 @@
 --
 insert into user_account (user_id, user_password, nickname, email, memo, created_at, created_by, modified_at, modified_by) values
-('hooney', 'hooney1108', 'hooney', 'hooney@mail.com', 'I am Hooney', now(), 'hooney', now(), 'hooeny');
+    ('hooney', 'hooney1108', 'hooney', 'hooney@mail.com', 'I am Hooney', now(), 'hooney', now(), 'hooeny');
 
 -- 1000 게시글
 insert into article (id, title, content, hashtag, created_at, created_by, modified_at, modified_by) values (1, 'Marketing Manager', 'White: The Melody of the Curse', '#eafcc3', '2022-09-23 02:39:53', 'iemmott0', '2022-09-25 02:02:21', 'lnaul0');
