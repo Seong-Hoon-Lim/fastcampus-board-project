@@ -23,9 +23,12 @@ public class ArticleComment extends AuditingFields {
 
     @Setter
     @ManyToOne(optional = false)
+    @JoinColumn(name = "article_id")
     private Article article; // 게시글 (ID)
+
     @Setter
     @ManyToOne(optional = false)
+    @JoinColumn(name = "user_account_id")
     private UserAccount userAccount; // 유저 정보 (ID)
 
     @Setter
