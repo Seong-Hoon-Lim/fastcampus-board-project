@@ -26,6 +26,7 @@ public class Article extends AuditingFields {
 
     @Setter
     @ManyToOne(optional = false)
+    @JoinColumn(name = "user_account_id")
     private UserAccount userAccount; // 유저 정보 (ID)
 
     @Setter
