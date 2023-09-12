@@ -28,14 +28,14 @@ public class ArticleCommentController {
         return "redirect:/articles/" + articleCommentRequest.articleId();
     }
 
-//    @PostMapping ("/{commentId}/delete")
-//    public String deleteArticleComment(
-//            @PathVariable Long commentId,
-//            @AuthenticationPrincipal BoardPrincipal boardPrincipal,
-//            Long articleId
-//    ) {
-//        articleCommentService.deleteArticleComment(commentId, boardPrincipal.getUsername());
-//
-//        return "redirect:/articles/" + articleId;
-//    }
+    @PostMapping ("/{commentId}/delete")
+    public String deleteArticleComment(
+            @PathVariable Long commentId,
+            @AuthenticationPrincipal BoardPrincipal boardPrincipal,
+            Long articleId
+    ) {
+        articleCommentService.deleteArticleComment(commentId, boardPrincipal.getUsername());
+
+        return "redirect:/articles/" + articleId;
+    }
 }
