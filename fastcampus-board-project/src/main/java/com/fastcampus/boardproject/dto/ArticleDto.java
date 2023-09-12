@@ -1,6 +1,7 @@
 package com.fastcampus.boardproject.dto;
 
 import com.fastcampus.boardproject.domain.Article;
+import com.fastcampus.boardproject.domain.UserAccount;
 
 import java.time.LocalDateTime;
 
@@ -38,9 +39,9 @@ public record ArticleDto(
         );
     }
 
-    public Article toEntity(UserAccountDto userAccount) {
+    public Article toEntity(UserAccount userAccount) {
         return Article.of(
-                userAccount.toEntity(),
+                userAccount,
                 title,
                 content,
                 hashtag
