@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.test.context.ContextConfiguration;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -14,7 +15,8 @@ import static org.assertj.core.api.Assertions.*;
 
 @DisplayName("테스트 도구 - Form 데이터 인코더")
 @Import({FormDataEncoder.class, ObjectMapper.class})
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE, classes = Void.class)
+@ContextConfiguration(classes = {FormDataEncoder.class})
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 class FormDataEncoderTest {
 
     private final FormDataEncoder formDataEncoder;
