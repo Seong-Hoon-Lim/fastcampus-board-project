@@ -32,7 +32,8 @@ Spring Boot
 * Bootstrap 5.2.3
 * Heroku
 
-## 데모 페이지
+## 데모 페이지 (프로젝트 배포)
+※ 최초 슬립 상태에서 페이지 진입까지 15초 이상 소요되므로 기다려주세요
 
 https://project-board-aebong-98d476ce6f08.herokuapp.com/
 
