@@ -49,9 +49,8 @@ Spring Boot
 
 https://project-board-aebong-98d476ce6f08.herokuapp.com/
 
-## 질문, 건의
+## Reference
 
-프로젝트에 관해 궁금하신 점이나 건의 사항이 있으시다면 아래 항목을 이용해 주세요.
-
-* Issues: 버그 리포트, 제안 사항
-* Discussions: 프로젝트와 관련한 논의와 정보
+* 유즈케이스 다이어그램 : document 폴더 참고
+* ERD : document 폴더 참고
+* API Endpoint 구글 시트 : https://docs.google.com/spreadsheets/d/1xSqANLi5EYdPLw0DW1UGPFS6Ja8ck5PmuoAfKw6EDfk/edit?usp=sharing
