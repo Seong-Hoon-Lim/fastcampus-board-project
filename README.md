@@ -1,9 +1,21 @@
-# Ref - 패스트캠퍼스 fastcampus-board-project
+# 프로젝트 : Ref - 패스트캠퍼스 fastcampus-board-project
 
-가장 기본적이고 보편적인 게시판 기능을 둘러볼 수 있는 서비스입니다. 2022년 6월 기준 가장 최신의 스프링 부트와 관련 기술들, 자바 17 기능들, 개발 도구들을 경험할 수 있도록 만들어졌습니다
+* SpringBoot 의 간단하고 보편적인 기능들을 활용하여 게시판 프로젝트 구현
+* Mock, MockMvc 를 활용한 TDD (테스트 주도 개발) 방식 개발
+* of(), toEntity(), toDto() 등 팩토리 메소드 활용한 매핑 전략 활용
+* GitKraken 을 통한 Git Flow Feature Branch 전략으로 형상 관리
+* Heroku 를 통해 배포
+
+## 주요 기능
+
+* JPA 의 Page, Pageable 를 활용 정렬, 검색, 페이징 구현
+* Querydsl 을 활용하여 JPA Repository 를 커스터마이징 한 키워드 검색 및 해시태그 검색 기능 구현
+* SpringSecurity 를 적용한 인증/인가 및 패스워드 암호화 구현
+* 그 외 게시판 기본 CRUD 기능과 댓글 등록, 삭제 기능 구현
 
 ## 개발 환경
 
+* window 10
 * Intellij IDEA Ultimate 2022.3.2
 * Java 17
 * Gradle 8.2.1
