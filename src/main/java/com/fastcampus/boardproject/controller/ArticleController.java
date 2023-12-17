@@ -2,7 +2,6 @@ package com.fastcampus.boardproject.controller;
 
 import com.fastcampus.boardproject.domain.constant.FormStatus;
 import com.fastcampus.boardproject.domain.constant.SearchType;
-import com.fastcampus.boardproject.dto.UserAccountDto;
 import com.fastcampus.boardproject.dto.request.ArticleRequest;
 import com.fastcampus.boardproject.dto.response.ArticleResponse;
 import com.fastcampus.boardproject.dto.response.ArticleWithCommentsResponse;
@@ -82,7 +81,7 @@ public class ArticleController {
         return "articles/form";
     }
 
-    @PostMapping ("/form")
+    @PostMapping("/form")
     public String postNewArticle(
             @AuthenticationPrincipal BoardPrincipal boardPrincipal,
             ArticleRequest articleRequest) {
@@ -100,7 +99,7 @@ public class ArticleController {
         return "articles/form";
     }
 
-    @PostMapping ("/{articleId}/form")
+    @PostMapping("/{articleId}/form")
     public String updateArticle(
             @PathVariable Long articleId,
             @AuthenticationPrincipal BoardPrincipal boardPrincipal,
@@ -111,7 +110,7 @@ public class ArticleController {
         return "redirect:/articles/" + articleId;
     }
 
-    @PostMapping ("/{articleId}/delete")
+    @PostMapping("/{articleId}/delete")
     public String deleteArticle(
             @PathVariable Long articleId,
             @AuthenticationPrincipal BoardPrincipal boardPrincipal

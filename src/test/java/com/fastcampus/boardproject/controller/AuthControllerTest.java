@@ -1,36 +1,36 @@
 package com.fastcampus.boardproject.controller;
 
-import com.fastcampus.boardproject.config.SecurityConfig;
-import com.fastcampus.boardproject.repository.UserAccountRepository;
-import com.fastcampus.boardproject.util.FormDataEncoder;
+import com.fastcampus.boardproject.config.TestSecurityConfig;
+import com.fastcampus.boardproject.service.ArticleService;
+import com.fastcampus.boardproject.service.PaginationService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.TestComponent;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.context.annotation.Import;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
+import org.springframework.test.web.servlet.MockMvc;
+
+import static org.mockito.BDDMockito.then;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @DisplayName("View 컨트롤러 - 인증")
-@ContextConfiguration(classes = {SecurityConfig.class})
-@Import(SecurityConfig.class)
-@WebMvcTest(Void.class)
-public class AuthControllerTest {
+@Import(TestSecurityConfig.class)
+@WebMvcTest(AuthControllerTest.EmptyController.class)
+class AuthControllerTest {
 
     private final MockMvc mvc;
 
-    @MockBean
-    private UserAccountRepository userAccountRepository;
+    @MockBean private ArticleService articleService;
+    @MockBean private PaginationService paginationService;
 
 
-    public AuthControllerTest(@Autowired MockMvc mvc) {
+    AuthControllerTest(@Autowired MockMvc mvc) {
         this.mvc = mvc;
     }
 
@@ -43,7 +43,15 @@ public class AuthControllerTest {
         //when & then
         mvc.perform(get("/login"))
                 .andExpect(status().isOk())
-                .andExpect(MockMvcResultMatchers.content().contentTypeCompatibleWith(MediaType.TEXT_HTML))
-                .andDo(MockMvcResultHandlers.print());
+                .andExpect(content().contentTypeCompatibleWith(MediaType.TEXT_HTML));
+        then(articleService).shouldHaveNoInteractions();
+        then(paginationService).shouldHaveNoInteractions();
     }
+
+    /**
+     * 어떤 Controller 도 필요하지 않은 테스트임을 나타내기 위해 테스트용
+     * 빈 Component 를 사용
+     */
+    @TestComponent
+    static class EmptyController {}
 }

@@ -1,6 +1,5 @@
 package com.fastcampus.boardproject.controller;
 
-import com.fastcampus.boardproject.config.SecurityConfig;
 import com.fastcampus.boardproject.config.TestSecurityConfig;
 import com.fastcampus.boardproject.dto.ArticleCommentDto;
 import com.fastcampus.boardproject.dto.request.ArticleCommentRequest;
@@ -35,7 +34,8 @@ class ArticleCommentControllerTest {
     private final MockMvc mvc;
     private final FormDataEncoder formDataEncoder;
     @MockBean private ArticleCommentService articleCommentService;
-    public ArticleCommentControllerTest(
+
+    ArticleCommentControllerTest(
             @Autowired MockMvc mvc,
             @Autowired FormDataEncoder formDataEncoder
     ) {
