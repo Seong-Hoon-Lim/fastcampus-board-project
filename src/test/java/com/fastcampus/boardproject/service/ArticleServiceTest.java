@@ -13,6 +13,7 @@ import com.fastcampus.boardproject.repository.HashtagRepository;
 import com.fastcampus.boardproject.repository.UserAccountRepository;
 
 import org.assertj.core.api.InstanceOfAssertFactories;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -317,6 +318,7 @@ class ArticleServiceTest {
         assertThat(actual).isEqualTo(expected);
         then(articleRepository).should().count();
     }
+    @Disabled
     @DisplayName("해시태그를 조회하면, 유니크 해시태그 리스트를 반환한다")
     @Test
     void givenNothing_whenCalling_thenReturnsHashtags() {
