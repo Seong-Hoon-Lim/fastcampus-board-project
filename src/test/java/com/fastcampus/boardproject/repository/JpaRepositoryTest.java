@@ -4,7 +4,6 @@ import com.fastcampus.boardproject.domain.Article;
 import com.fastcampus.boardproject.domain.Hashtag;
 import com.fastcampus.boardproject.domain.UserAccount;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -102,7 +101,6 @@ class JpaRepositoryTest {
         assertThat(articleCommentRepository.count()).isEqualTo(previousArticleCommentCount - deletedCommentsSize);
     }
 
-    @Disabled
     @DisplayName("[Querydsl] 전체 hashtag 리스트에서 이름만 조회하기")
     @Test
     void givenNothing_whenQueryingHashtags_thenReturnsHashtagNames() {
