@@ -1,4 +1,4 @@
-package com.fastcampus.boardproject.repository;
+package com.fastcampus.boardproject.repository.querydsl;
 
 import java.util.List;
 
