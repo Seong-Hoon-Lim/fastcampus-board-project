@@ -2,12 +2,12 @@ package com.fastcampus.boardproject.repository.querydsl;
 
 import com.fastcampus.boardproject.domain.Hashtag;
 import com.fastcampus.boardproject.domain.QHashtag;
-import com.fastcampus.boardproject.repository.HashtagRepositoryCustom;
 import org.springframework.data.jpa.repository.support.QuerydslRepositorySupport;
 
 import java.util.List;
 
-public class HashtagRepositoryCustomImpl extends QuerydslRepositorySupport implements HashtagRepositoryCustom {
+public class HashtagRepositoryCustomImpl extends QuerydslRepositorySupport
+        implements HashtagRepositoryCustom {
 
     public HashtagRepositoryCustomImpl() {
         super(Hashtag.class);
