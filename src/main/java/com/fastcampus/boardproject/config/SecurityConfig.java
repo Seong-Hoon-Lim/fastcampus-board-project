@@ -1,9 +1,7 @@
 package com.fastcampus.boardproject.config;
 
-import com.fastcampus.boardproject.dto.UserAccountDto;
 import com.fastcampus.boardproject.dto.security.BoardPrincipal;
 import com.fastcampus.boardproject.dto.security.KakaoOAuth2Response;
-import com.fastcampus.boardproject.repository.UserAccountRepository;
 import com.fastcampus.boardproject.service.UserAccountService;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
@@ -47,7 +45,7 @@ public class SecurityConfig {
                 .logout(logout -> logout.logoutSuccessUrl("/"))
                 .oauth2Login(oAuth -> oAuth
                         .userInfoEndpoint(userInfo -> userInfo
-                                        .userService(oAuth2UserService)
+                                .userService(oAuth2UserService)
                         )
                 )
                 .build();
@@ -75,7 +73,6 @@ public class SecurityConfig {
             String registrationId = userRequest.getClientRegistration().getRegistrationId(); //"kakao"
             String providerId = String.valueOf(kakaoResponse.id());
             String username = registrationId + "_" + providerId;
-
             String dummyPassword = passwordEncoder.encode("{bcrypt}" + UUID.randomUUID());
 
             return userAccountService.searchUser(username)
@@ -88,7 +85,6 @@ public class SecurityConfig {
                                             kakaoResponse.email(),
                                             kakaoResponse.nickname(),
                                             null
-
                                     )
                             )
                     );
